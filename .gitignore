@@ -1,0 +1,13 @@
+plaintext
+# Ignoriere alles im Arbeitsverzeichnis
+*
+
+# Aber tracke explizit den src-Ordner
+!src/
+
+# Weiterhin ignoriere alles im src-Ordner, falls spezifische Dateien ausgeschlossen werden müssen
+src/**/*
+!src/**/
+
+# Behalte die Wichtigkeit von Versionierungen bei
+!.gitignore
