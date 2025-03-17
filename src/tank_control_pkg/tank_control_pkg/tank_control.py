@@ -4,7 +4,7 @@ from geometry_msgs.msg import Twist
 import smbus2
 import yaml
 from time import time
-#HalloHalloHalloHalloHallo
+
 class I2CController:
     def __init__(self, address, bus_number=1):
         self.address = address
@@ -78,7 +78,7 @@ class TankControl(Node):
 
         # Debug-Ausgabe für das Konsole
         print(f"Left speed: {left_speed}, Right speed: {right_speed}")
-
+        #self.i2c_controller.set_stepper_position(self, 1000)
         # Setze die Geschwindigkeiten der Motoren
         self.i2c_controller.set_motor_speeds(int(left_speed), int(right_speed))
         self.last_msg_time = time()
