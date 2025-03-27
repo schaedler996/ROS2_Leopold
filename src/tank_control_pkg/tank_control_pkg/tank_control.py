@@ -60,18 +60,20 @@ class I2CController:
 class TankControl(Node):
 
     def subscription_callback(self, msg):
+        # Wende Exponentialkurven auf die Eingaben an
         self.linear_x = self.apply_exponential_curve(msg.linear.x, exponent=self.expo_linear)
         self.angular_z = self.apply_exponential_curve(msg.angular.z, exponent=self.expo_angular)
 
         corrected_linear_x = self.linear_x * self.linear_speed_adjusted
+        angular_speed_amplified = self.angular_z * self.angular_amp
 
-        angular_speed_amplified = self.angular_z * self.angular_amp 
-        if corrected_linear_x >= 0:
-            left_speed = corrected_linear_x - angular_speed_amplified
-            right_speed = corrected_linear_x + angular_speed_amplified
-        else: 
-            left_speed = corrected_linear_x + angular_speed_amplified
-            right_speed = corrected_linear_x - angular_speed_amplified
+        # Setze die maximale Geschwindigkeit
+        max_speed = 127
+
+        # Berechne die Geschwindigkeit basierend auf der linearen und angularen Komponenten
+        # Es wird davon ausgegangen, dass die Werte von -1 bis 1 skalieren
+        left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
+        right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
 
         #print(left_speed,right_speed)
         left_speed = self.map_range(left_speed, -3.3, 3.3, -127, 127)  
