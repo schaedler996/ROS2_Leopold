@@ -1,0 +1,120 @@
+[0.000000] (-) TimerEvent: {}
+[0.000884] (robot_peripherals_pkg) JobQueued: {'identifier': 'robot_peripherals_pkg', 'dependencies': OrderedDict()}
+[0.001560] (tank_control_pkg) JobQueued: {'identifier': 'tank_control_pkg', 'dependencies': OrderedDict()}
+[0.002545] (robot_peripherals_pkg) JobStarted: {'identifier': 'robot_peripherals_pkg'}
+[0.021217] (tank_control_pkg) JobStarted: {'identifier': 'tank_control_pkg'}
+[0.099162] (-) TimerEvent: {}
+[0.200351] (-) TimerEvent: {}
+[0.301258] (-) TimerEvent: {}
+[0.402136] (-) TimerEvent: {}
+[0.503005] (-) TimerEvent: {}
+[0.603973] (-) TimerEvent: {}
+[0.705254] (-) TimerEvent: {}
+[0.806829] (-) TimerEvent: {}
+[0.907894] (-) TimerEvent: {}
+[1.008879] (-) TimerEvent: {}
+[1.109866] (-) TimerEvent: {}
+[1.210819] (-) TimerEvent: {}
+[1.311844] (-) TimerEvent: {}
+[1.412886] (-) TimerEvent: {}
+[1.514510] (-) TimerEvent: {}
+[1.616222] (-) TimerEvent: {}
+[1.717114] (-) TimerEvent: {}
+[1.818000] (-) TimerEvent: {}
+[1.918969] (-) TimerEvent: {}
+[2.023899] (-) TimerEvent: {}
+[2.124899] (-) TimerEvent: {}
+[2.225976] (-) TimerEvent: {}
+[2.327553] (-) TimerEvent: {}
+[2.358060] (tank_control_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/tank_control_pkg', 'build', '--build-base', '/home/jetson/ros2_ws/build/tank_control_pkg/build', 'install', '--record', '/home/jetson/ros2_ws/build/tank_control_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/ros2_ws/src/tank_control_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetson', 'SSH_CLIENT': '192.168.250.61 35050 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:', 'BROWSER': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/jetson', 'OLDPWD': '/home/jetson', 'TERM_PROGRAM_VERSION': '1.97.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8610600a-dd3a-418a-aecd-15c153ca0ee2.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'jetson', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '12', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/bin/remote-cli:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/.noConfigDebugAdapterEndpoints/endpoint-66ad2ad3c1fd1694.txt', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-4a1f427a52.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/jetson/ros2_ws/build/tank_control_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.250.61 35050 192.168.250.62 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/ros2_ws/build/tank_control_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.427755] (-) TimerEvent: {}
+[2.529683] (-) TimerEvent: {}
+[2.581532] (robot_peripherals_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/robot_peripherals_pkg', 'build', '--build-base', '/home/jetson/ros2_ws/build/robot_peripherals_pkg/build', 'install', '--record', '/home/jetson/ros2_ws/build/robot_peripherals_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/ros2_ws/src/robot_peripherals_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetson', 'SSH_CLIENT': '192.168.250.61 35050 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:', 'BROWSER': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/jetson', 'OLDPWD': '/home/jetson', 'TERM_PROGRAM_VERSION': '1.97.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8610600a-dd3a-418a-aecd-15c153ca0ee2.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'jetson', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '12', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/jetson/.vscode-server/cli/servers/Stable-e54c774e0add60467559eb0d1e229c6452cf8447/server/bin/remote-cli:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.4.0/.noConfigDebugAdapterEndpoints/endpoint-66ad2ad3c1fd1694.txt', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-4a1f427a52.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/jetson/ros2_ws/build/robot_peripherals_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.250.61 35050 192.168.250.62 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/ros2_ws/build/robot_peripherals_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.630091] (-) TimerEvent: {}
+[2.731078] (-) TimerEvent: {}
+[2.832214] (-) TimerEvent: {}
+[2.934272] (-) TimerEvent: {}
+[3.036430] (-) TimerEvent: {}
+[3.044220] (tank_control_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[3.046483] (tank_control_pkg) StdoutLine: {'line': b'creating ../../build/tank_control_pkg/tank_control_pkg.egg-info\n'}
+[3.046879] (tank_control_pkg) StdoutLine: {'line': b'writing ../../build/tank_control_pkg/tank_control_pkg.egg-info/PKG-INFO\n'}
+[3.047403] (tank_control_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/tank_control_pkg/tank_control_pkg.egg-info/dependency_links.txt\n'}
+[3.048417] (tank_control_pkg) StdoutLine: {'line': b'writing entry points to ../../build/tank_control_pkg/tank_control_pkg.egg-info/entry_points.txt\n'}
+[3.049280] (tank_control_pkg) StdoutLine: {'line': b'writing requirements to ../../build/tank_control_pkg/tank_control_pkg.egg-info/requires.txt\n'}
+[3.049616] (tank_control_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/tank_control_pkg/tank_control_pkg.egg-info/top_level.txt\n'}
+[3.050146] (tank_control_pkg) StdoutLine: {'line': b"writing manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'\n"}
+[3.055355] (tank_control_pkg) StdoutLine: {'line': b"reading manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'\n"}
+[3.057693] (tank_control_pkg) StdoutLine: {'line': b"writing manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'\n"}
+[3.058311] (tank_control_pkg) StdoutLine: {'line': b'running build\n'}
+[3.059288] (tank_control_pkg) StdoutLine: {'line': b'running build_py\n'}
+[3.059706] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/tank_control_pkg/build\n'}
+[3.060547] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/tank_control_pkg/build/lib\n'}
+[3.060951] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg\n'}
+[3.061294] (tank_control_pkg) StdoutLine: {'line': b'copying tank_control_pkg/linear_movement_test.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg\n'}
+[3.061506] (tank_control_pkg) StdoutLine: {'line': b'copying tank_control_pkg/__init__.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg\n'}
+[3.061719] (tank_control_pkg) StdoutLine: {'line': b'copying tank_control_pkg/tank_control.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg\n'}
+[3.061894] (tank_control_pkg) StdoutLine: {'line': b'running install\n'}
+[3.062256] (tank_control_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[3.065572] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg\n'}
+[3.066068] (tank_control_pkg) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/linear_movement_test.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg\n'}
+[3.066336] (tank_control_pkg) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/__init__.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg\n'}
+[3.066512] (tank_control_pkg) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/tank_control.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg\n'}
+[3.067398] (tank_control_pkg) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/linear_movement_test.py to linear_movement_test.cpython-310.pyc\n'}
+[3.069191] (tank_control_pkg) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[3.069675] (tank_control_pkg) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/tank_control.py to tank_control.cpython-310.pyc\n'}
+[3.073347] (tank_control_pkg) StdoutLine: {'line': b'running install_data\n'}
+[3.073917] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index\n'}
+[3.074244] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index\n'}
+[3.074498] (tank_control_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index/packages\n'}
+[3.074805] (tank_control_pkg) StdoutLine: {'line': b'copying resource/tank_control_pkg -> /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index/packages\n'}
+[3.074999] (tank_control_pkg) StdoutLine: {'line': b'copying package.xml -> /home/jetson/ros2_ws/install/tank_control_pkg/share/tank_control_pkg\n'}
+[3.075199] (tank_control_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.080829] (tank_control_pkg) StdoutLine: {'line': b'Copying ../../build/tank_control_pkg/tank_control_pkg.egg-info to /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg-0.0.0-py3.10.egg-info\n'}
+[3.083261] (tank_control_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[3.136669] (-) TimerEvent: {}
+[3.148894] (tank_control_pkg) StdoutLine: {'line': b'Installing linear_test script to /home/jetson/ros2_ws/install/tank_control_pkg/lib/tank_control_pkg\n'}
+[3.149851] (tank_control_pkg) StdoutLine: {'line': b'Installing tank_control script to /home/jetson/ros2_ws/install/tank_control_pkg/lib/tank_control_pkg\n'}
+[3.150832] (tank_control_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/ros2_ws/build/tank_control_pkg/install.log'\n"}
+[3.225131] (robot_peripherals_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[3.227000] (robot_peripherals_pkg) StdoutLine: {'line': b'creating ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info\n'}
+[3.227499] (robot_peripherals_pkg) StdoutLine: {'line': b'writing ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/PKG-INFO\n'}
+[3.228647] (robot_peripherals_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/dependency_links.txt\n'}
+[3.229574] (robot_peripherals_pkg) StdoutLine: {'line': b'writing entry points to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/entry_points.txt\n'}
+[3.229859] (robot_peripherals_pkg) StdoutLine: {'line': b'writing requirements to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/requires.txt\n'}
+[3.230090] (robot_peripherals_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/top_level.txt\n'}
+[3.230650] (robot_peripherals_pkg) StdoutLine: {'line': b"writing manifest file '../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/SOURCES.txt'\n"}
+[3.235158] (robot_peripherals_pkg) StdoutLine: {'line': b"reading manifest file '../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/SOURCES.txt'\n"}
+[3.236716] (-) TimerEvent: {}
+[3.237234] (robot_peripherals_pkg) StdoutLine: {'line': b"writing manifest file '../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/SOURCES.txt'\n"}
+[3.237581] (robot_peripherals_pkg) StdoutLine: {'line': b'running build\n'}
+[3.237813] (robot_peripherals_pkg) StdoutLine: {'line': b'running build_py\n'}
+[3.238035] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/robot_peripherals_pkg/build\n'}
+[3.238288] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib\n'}
+[3.238445] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib/robot_peripherals_pkg\n'}
+[3.238677] (robot_peripherals_pkg) StdoutLine: {'line': b'copying robot_peripherals_pkg/__init__.py -> /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib/robot_peripherals_pkg\n'}
+[3.238830] (robot_peripherals_pkg) StdoutLine: {'line': b'copying robot_peripherals_pkg/robot_peripherals.py -> /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib/robot_peripherals_pkg\n'}
+[3.239047] (robot_peripherals_pkg) StdoutLine: {'line': b'running install\n'}
+[3.240151] (robot_peripherals_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[3.241817] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg\n'}
+[3.242065] (robot_peripherals_pkg) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib/robot_peripherals_pkg/__init__.py -> /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg\n'}
+[3.242320] (robot_peripherals_pkg) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/build/robot_peripherals_pkg/build/lib/robot_peripherals_pkg/robot_peripherals.py -> /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg\n'}
+[3.243745] (robot_peripherals_pkg) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[3.244423] (robot_peripherals_pkg) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg/robot_peripherals.py to robot_peripherals.cpython-310.pyc\n'}
+[3.246598] (robot_peripherals_pkg) StdoutLine: {'line': b'running install_data\n'}
+[3.246853] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/robot_peripherals_pkg/share/ament_index\n'}
+[3.247052] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/robot_peripherals_pkg/share/ament_index/resource_index\n'}
+[3.247234] (robot_peripherals_pkg) StdoutLine: {'line': b'creating /home/jetson/ros2_ws/install/robot_peripherals_pkg/share/ament_index/resource_index/packages\n'}
+[3.247404] (robot_peripherals_pkg) StdoutLine: {'line': b'copying resource/robot_peripherals_pkg -> /home/jetson/ros2_ws/install/robot_peripherals_pkg/share/ament_index/resource_index/packages\n'}
+[3.247579] (robot_peripherals_pkg) StdoutLine: {'line': b'copying package.xml -> /home/jetson/ros2_ws/install/robot_peripherals_pkg/share/robot_peripherals_pkg\n'}
+[3.247953] (robot_peripherals_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.253170] (robot_peripherals_pkg) StdoutLine: {'line': b'Copying ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info to /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg-0.0.0-py3.10.egg-info\n'}
+[3.255590] (robot_peripherals_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[3.292599] (tank_control_pkg) CommandEnded: {'returncode': 0}
+[3.310941] (robot_peripherals_pkg) StdoutLine: {'line': b'Installing robot_peripherals script to /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/robot_peripherals_pkg\n'}
+[3.313303] (robot_peripherals_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/ros2_ws/build/robot_peripherals_pkg/install.log'\n"}
+[3.325764] (tank_control_pkg) JobEnded: {'identifier': 'tank_control_pkg', 'rc': 0}
+[3.336969] (-) TimerEvent: {}
+[3.418697] (robot_peripherals_pkg) CommandEnded: {'returncode': 0}
+[3.437568] (-) TimerEvent: {}
+[3.443422] (robot_peripherals_pkg) JobEnded: {'identifier': 'robot_peripherals_pkg', 'rc': 0}
+[3.448025] (-) EventReactorShutdown: {}

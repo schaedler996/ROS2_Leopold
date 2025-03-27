@@ -1,0 +1,3 @@
+[console_scripts]
+robot_peripherals = robot_peripherals_pkg.robot_peripherals:main
+

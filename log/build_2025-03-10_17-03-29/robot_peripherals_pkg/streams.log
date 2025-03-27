@@ -1,0 +1,21 @@
+[2.394s] Invoking command in '/home/jetson/ros2_ws/src/robot_peripherals_pkg': PYTHONPATH=/home/jetson/ros2_ws/build/robot_peripherals_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_peripherals_pkg build --build-base /home/jetson/ros2_ws/build/robot_peripherals_pkg/build install --record /home/jetson/ros2_ws/build/robot_peripherals_pkg/install.log --single-version-externally-managed install_data
+[2.992s] running egg_info
+[2.993s] writing ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/PKG-INFO
+[2.995s] writing dependency_links to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/dependency_links.txt
+[2.995s] writing entry points to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/entry_points.txt
+[2.995s] writing requirements to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/requires.txt
+[2.996s] writing top-level names to ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/top_level.txt
+[2.999s] reading manifest file '../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/SOURCES.txt'
+[3.001s] writing manifest file '../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info/SOURCES.txt'
+[3.002s] running build
+[3.002s] running build_py
+[3.003s] running install
+[3.003s] running install_lib
+[3.007s] running install_data
+[3.007s] running install_egg_info
+[3.013s] removing '/home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[3.013s] Copying ../../build/robot_peripherals_pkg/robot_peripherals_pkg.egg-info to /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages/robot_peripherals_pkg-0.0.0-py3.10.egg-info
+[3.015s] running install_scripts
+[3.075s] Installing robot_peripherals script to /home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/robot_peripherals_pkg
+[3.076s] writing list of installed files to '/home/jetson/ros2_ws/build/robot_peripherals_pkg/install.log'
+[3.205s] Invoked command in '/home/jetson/ros2_ws/src/robot_peripherals_pkg' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/robot_peripherals_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/robot_peripherals_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_peripherals_pkg build --build-base /home/jetson/ros2_ws/build/robot_peripherals_pkg/build install --record /home/jetson/ros2_ws/build/robot_peripherals_pkg/install.log --single-version-externally-managed install_data

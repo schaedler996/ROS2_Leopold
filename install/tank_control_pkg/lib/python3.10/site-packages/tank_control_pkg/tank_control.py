@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from sensor_msgs.msg import Joy
 import smbus2
 import yaml
 from time import time
@@ -11,35 +10,35 @@ class I2CController:
         self.address = address
         self.bus = smbus2.SMBus(bus_number)
         self.reset_values()
-        self.error_count = 0  # Initialisiere den Fehlerzähler
 
     def reset_values(self):
         self.motor1_speed = 0
         self.motor2_speed = 0
         self.servo1_pos = 90
         self.servo2_pos = 90
-        self.stepper_speed = 0
+        self.stepper_pos = 0
 
     def send_all_commands(self):
         motor1_speed = self.motor1_speed & 0xFF
         motor2_speed = self.motor2_speed & 0xFF
-        stepper_speed = self.stepper_speed & 0xFF
+
+        stepper_high_byte = (self.stepper_pos >> 8) & 0xFF
+        stepper_low_byte = self.stepper_pos & 0xFF
 
         data = [
             motor1_speed,
             motor2_speed,
             self.servo1_pos,
             self.servo2_pos,
-            stepper_speed
+            stepper_high_byte,
+            stepper_low_byte
         ]
 
         try:
             self.bus.write_i2c_block_data(self.address, 0, data)
-            # Wenn das Senden erfolgreich ist, setze den Fehlerzähler zurück
-            self.error_count = 0
+            #print(f"Daten gesendet: {data}")
         except Exception as e:
-            self.error_count += 1
-            print(f"Fehler beim Senden der Daten (Versuch {self.error_count}): {e}")
+            print(f"Fehler beim Senden der Daten: {e}")
 
     def set_motor_speeds(self, motor1, motor2):
         if -128 <= motor1 <= 127 and -128 <= motor2 <= 127:
@@ -51,11 +50,9 @@ class I2CController:
             self.servo1_pos = servo1
             self.servo2_pos = servo2
 
-    def set_stepper_speed(self, speed):
-        if -255 <= speed <= 255:
-            self.stepper_speed = speed
-
-
+    def set_stepper_position(self, pos):
+        if -32768 <= pos <= 32767:
+            self.stepper_pos = pos
 
 class TankControl(Node):
 
@@ -76,11 +73,8 @@ class TankControl(Node):
         #print(left_speed,right_speed)
         left_speed = self.map_range(left_speed, -3.3, 3.3, -127, 127)  
         right_speed = self.map_range(right_speed, -3.3, 3.3, -127, 127)
-        turret_speed = self.map_range(turret_speed, -3.3, 3.3, -127, 127)
-        print(left_speed,right_speed,turret_speed,Joy.axes)
-
+        print(left_speed,right_speed)
         self.i2c_controller.set_motor_speeds(int(left_speed), int(right_speed))
-        self.i2c_controller.set_stepper_speed(int(turret_speed))
         self.last_msg_time = time()
 
     def __init__(self):

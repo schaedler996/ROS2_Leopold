@@ -1,0 +1,41 @@
+[2.339s] Invoking command in '/home/jetson/ros2_ws/src/tank_control_pkg': PYTHONPATH=/home/jetson/ros2_ws/build/tank_control_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tank_control_pkg build --build-base /home/jetson/ros2_ws/build/tank_control_pkg/build install --record /home/jetson/ros2_ws/build/tank_control_pkg/install.log --single-version-externally-managed install_data
+[3.025s] running egg_info
+[3.025s] creating ../../build/tank_control_pkg/tank_control_pkg.egg-info
+[3.026s] writing ../../build/tank_control_pkg/tank_control_pkg.egg-info/PKG-INFO
+[3.026s] writing dependency_links to ../../build/tank_control_pkg/tank_control_pkg.egg-info/dependency_links.txt
+[3.028s] writing entry points to ../../build/tank_control_pkg/tank_control_pkg.egg-info/entry_points.txt
+[3.028s] writing requirements to ../../build/tank_control_pkg/tank_control_pkg.egg-info/requires.txt
+[3.028s] writing top-level names to ../../build/tank_control_pkg/tank_control_pkg.egg-info/top_level.txt
+[3.029s] writing manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'
+[3.034s] reading manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'
+[3.036s] writing manifest file '../../build/tank_control_pkg/tank_control_pkg.egg-info/SOURCES.txt'
+[3.038s] running build
+[3.038s] running build_py
+[3.039s] creating /home/jetson/ros2_ws/build/tank_control_pkg/build
+[3.039s] creating /home/jetson/ros2_ws/build/tank_control_pkg/build/lib
+[3.040s] creating /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg
+[3.040s] copying tank_control_pkg/linear_movement_test.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg
+[3.040s] copying tank_control_pkg/__init__.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg
+[3.040s] copying tank_control_pkg/tank_control.py -> /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg
+[3.040s] running install
+[3.041s] running install_lib
+[3.044s] creating /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg
+[3.045s] copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/linear_movement_test.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg
+[3.045s] copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/__init__.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg
+[3.045s] copying /home/jetson/ros2_ws/build/tank_control_pkg/build/lib/tank_control_pkg/tank_control.py -> /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg
+[3.046s] byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/linear_movement_test.py to linear_movement_test.cpython-310.pyc
+[3.048s] byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/__init__.py to __init__.cpython-310.pyc
+[3.048s] byte-compiling /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg/tank_control.py to tank_control.cpython-310.pyc
+[3.052s] running install_data
+[3.053s] creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index
+[3.053s] creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index
+[3.053s] creating /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index/packages
+[3.053s] copying resource/tank_control_pkg -> /home/jetson/ros2_ws/install/tank_control_pkg/share/ament_index/resource_index/packages
+[3.054s] copying package.xml -> /home/jetson/ros2_ws/install/tank_control_pkg/share/tank_control_pkg
+[3.054s] running install_egg_info
+[3.060s] Copying ../../build/tank_control_pkg/tank_control_pkg.egg-info to /home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages/tank_control_pkg-0.0.0-py3.10.egg-info
+[3.062s] running install_scripts
+[3.128s] Installing linear_test script to /home/jetson/ros2_ws/install/tank_control_pkg/lib/tank_control_pkg
+[3.128s] Installing tank_control script to /home/jetson/ros2_ws/install/tank_control_pkg/lib/tank_control_pkg
+[3.129s] writing list of installed files to '/home/jetson/ros2_ws/build/tank_control_pkg/install.log'
+[3.272s] Invoked command in '/home/jetson/ros2_ws/src/tank_control_pkg' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/tank_control_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/tank_control_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tank_control_pkg build --build-base /home/jetson/ros2_ws/build/tank_control_pkg/build install --record /home/jetson/ros2_ws/build/tank_control_pkg/install.log --single-version-externally-managed install_data
