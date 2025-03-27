@@ -43,17 +43,17 @@ class I2CController:
 
     def set_motor_speeds(self, motor1, motor2):
         if -128 <= motor1 <= 127 and -128 <= motor2 <= 127:
-            self.motor1_speed = motor1
-            self.motor2_speed = motor2
+            self.motor1_speed = int(motor1)
+            self.motor2_speed = int(motor2)
 
     def set_servo_positions(self, servo1, servo2):
         if 0 <= servo1 <= 180 and 0 <= servo2 <= 180:
-            self.servo1_pos = servo1
-            self.servo2_pos = servo2
+            self.servo1_pos = int(servo1)
+            self.servo2_pos = int(servo2)
 
     def set_stepper_speed(self, speed):
         if -255 <= speed <= 255:
-            self.stepper_speed = speed
+            self.stepper_speed = int(speed)
 
 
 class TankControl(Node):
@@ -70,28 +70,30 @@ class TankControl(Node):
         max_speed = 127
 
         # Berechnungen
+    
         left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
-
-        turret_speed = self.map_range(self.joy_x, -1.0, 1.0, -255, 255)
+        turret_speed = self.map_range(self.joy_x, -1.0, 1.0, -127, 127)
         
-        # Zeige Achse und Geschwindigkeiten an
-        print(f"Left Speed: {left_speed}, Right Speed: {right_speed}, Turret Speed: {turret_speed}, Joy Axis[2]: {self.joy_axes[2]}")
+        # Begrenze die Geschwindigkeiten, um sicherzustellen, dass sie innerhalb von [-127, 127] bleiben
+        left_speed = max(min(left_speed, max_speed), -max_speed)
+        right_speed = max(min(right_speed, max_speed), -max_speed)
 
-        self.i2c_controller.set_motor_speeds(int(left_speed), int(right_speed))
-        self.i2c_controller.set_stepper_speed(int(turret_speed))
+        # Zeige Achse und Geschwindigkeiten an
+        print(f"Left Speed: {int(left_speed)}, Right Speed: {int(right_speed)}, Turret Speed: {int(turret_speed)}, Joy Axis[2]: {int(self.joy_axes[2])}")
+        print(corrected_linear_x, angular_speed_amplified, max_speed)
+        self.i2c_controller.set_motor_speeds(left_speed, right_speed)
+        self.i2c_controller.set_stepper_speed(turret_speed)
         self.last_msg_time = time()
 
     def joy_callback(self, joy_msg):
         # X von Joy-Message
-        self.joy_x = joy_msg.axes[0]  # Erster Achsenwert
+        self.joy_x = joy_msg.axes[2]  # Erster Achsenwert
         self.joy_axes = joy_msg.axes  # Ganze Liste
     
     def __init__(self):
         super().__init__('tank_control')
         self.i2c_controller = I2CController(0x08)
-        self.joy_x = 0.0  # Standardwert für die Joystick-X-Achse
-        self.joy_axes = [0.0] * 6  # Annahme von 6 Achsen
 
         try:
             self.config = self.load_yaml_config("/home/jetson/ros2_ws/src/params_pkg/params/robot_params.yaml")
