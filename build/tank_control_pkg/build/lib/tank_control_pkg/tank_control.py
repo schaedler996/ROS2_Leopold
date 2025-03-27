@@ -56,39 +56,43 @@ class I2CController:
             self.stepper_speed = speed
 
 
-
 class TankControl(Node):
 
     def subscription_callback(self, msg):
-        # Wende Exponentialkurven auf die Eingaben an
+        # Berechne Geschwindigkeiten basierend auf der Twist-Nachricht
         self.linear_x = self.apply_exponential_curve(msg.linear.x, exponent=self.expo_linear)
         self.angular_z = self.apply_exponential_curve(msg.angular.z, exponent=self.expo_angular)
 
         corrected_linear_x = self.linear_x * self.linear_speed_adjusted
         angular_speed_amplified = self.angular_z * self.angular_amp
-
-        # Setze die maximale Geschwindigkeit
+        
+        # Maximalgeschwindigkeit
         max_speed = 127
 
-        # Berechne die Geschwindigkeit basierend auf der linearen und angularen Komponenten
-        # Es wird davon ausgegangen, dass die Werte von -1 bis 1 skalieren
+        # Berechnungen
         left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
 
-        #print(left_speed,right_speed)
-        left_speed = self.map_range(left_speed, -3.3, 3.3, -127, 127)  
-        right_speed = self.map_range(right_speed, -3.3, 3.3, -127, 127)
-        #turret_speed = self.map_range(turret_speed, -3.3, 3.3, -127, 127)
-        print(left_speed,right_speed,Joy.axes(2))
+        turret_speed = self.map_range(self.joy_x, -1.0, 1.0, -255, 255)
+        
+        # Zeige Achse und Geschwindigkeiten an
+        print(f"Left Speed: {left_speed}, Right Speed: {right_speed}, Turret Speed: {turret_speed}, Joy Axis[2]: {self.joy_axes[2]}")
 
         self.i2c_controller.set_motor_speeds(int(left_speed), int(right_speed))
-        #self.i2c_controller.set_stepper_speed(int(turret_speed))
+        self.i2c_controller.set_stepper_speed(int(turret_speed))
         self.last_msg_time = time()
 
+    def joy_callback(self, joy_msg):
+        # X von Joy-Message
+        self.joy_x = joy_msg.axes[0]  # Erster Achsenwert
+        self.joy_axes = joy_msg.axes  # Ganze Liste
+    
     def __init__(self):
         super().__init__('tank_control')
         self.i2c_controller = I2CController(0x08)
-        
+        self.joy_x = 0.0  # Standardwert für die Joystick-X-Achse
+        self.joy_axes = [0.0] * 6  # Annahme von 6 Achsen
+
         try:
             self.config = self.load_yaml_config("/home/jetson/ros2_ws/src/params_pkg/params/robot_params.yaml")
         except Exception as e:
@@ -104,6 +108,7 @@ class TankControl(Node):
         self.angular_amp = self.config['robot_parameters']['angular_speed_amplification_factor']
         
         self.subscription = self.create_subscription(Twist, '/cmd_vel', self.subscription_callback, 10)
+        self.joy_subscription = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
 
         self.last_msg_time = time()
@@ -122,6 +127,7 @@ class TankControl(Node):
         # Optionally stop motors if no message after a certain period
         if elapsed_time >= 0.1:
             self.i2c_controller.set_motor_speeds(0, 0)
+            self.i2c_controller.set_stepper_speed(0)
 
     @staticmethod
     def apply_exponential_curve(value, exponent):
