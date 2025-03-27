@@ -78,12 +78,12 @@ class TankControl(Node):
         #print(left_speed,right_speed)
         left_speed = self.map_range(left_speed, -3.3, 3.3, -127, 127)  
         right_speed = self.map_range(right_speed, -3.3, 3.3, -127, 127)
-        turret_speed = self.map_range(turret_speed, -3.3, 3.3, -127, 127)
-        print(left_speed,right_speed,turret_speed,Joy.axes)
-
+        #turret_speed = self.map_range(turret_speed, -3.3, 3.3, -127, 127)
+        turretspeed = self.maprange(right_speed, -1.0, 1.0, -255, 255)
         self.i2c_controller.set_motor_speeds(int(left_speed), int(right_speed))
-        self.i2c_controller.set_stepper_speed(int(turret_speed))
+        #self.i2c_controller.set_stepper_speed(int(turret_speed))
         self.last_msg_time = time()
+        print(Joy._axes())
 
     def __init__(self):
         super().__init__('tank_control')
