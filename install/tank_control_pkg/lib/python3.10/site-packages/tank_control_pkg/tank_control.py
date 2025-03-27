@@ -52,7 +52,7 @@ class I2CController:
             self.servo2_pos = int(servo2)
 
     def set_stepper_speed(self, speed):
-        if -255 <= speed <= 255:
+        if -128 <= speed <= 127:
             self.stepper_speed = int(speed)
 
 
@@ -73,11 +73,12 @@ class TankControl(Node):
     
         left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
-        turret_speed = self.map_range(self.joy_axes[2], -1.0, 1.0, -255, 255)
+        turret_speed = self.map_range(self.joy_axes[2], -0.99, 0.99, -127, 127)
         
         # Begrenze die Geschwindigkeiten, um sicherzustellen, dass sie innerhalb von [-127, 127] bleiben
         left_speed = max(min(left_speed, max_speed), -max_speed)
         right_speed = max(min(right_speed, max_speed), -max_speed)
+        turret_speed = max(min(turret_speed, max_speed), -max_speed)
 
         # Zeige Achse und Geschwindigkeiten an
         print(f"Left Speed: {int(left_speed)}, Right Speed: {int(right_speed)}, Turret Speed: {int(turret_speed)}")
