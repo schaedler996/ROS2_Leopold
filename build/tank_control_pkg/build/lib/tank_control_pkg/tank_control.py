@@ -73,22 +73,22 @@ class TankControl(Node):
     
         left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
-        turret_speed = self.map_range(self.joy_x, -1.0, 1.0, -127, 127)
+        turret_speed = self.map_range(self.joy_axes[2], -1.0, 1.0, -255, 255)
         
         # Begrenze die Geschwindigkeiten, um sicherzustellen, dass sie innerhalb von [-127, 127] bleiben
         left_speed = max(min(left_speed, max_speed), -max_speed)
         right_speed = max(min(right_speed, max_speed), -max_speed)
 
         # Zeige Achse und Geschwindigkeiten an
-        print(f"Left Speed: {int(left_speed)}, Right Speed: {int(right_speed)}, Turret Speed: {int(turret_speed)}, Joy Axis[2]: {int(self.joy_axes[2])}")
-        print(corrected_linear_x, angular_speed_amplified, max_speed)
+        print(f"Left Speed: {int(left_speed)}, Right Speed: {int(right_speed)}, Turret Speed: {int(turret_speed)}")
+
         self.i2c_controller.set_motor_speeds(left_speed, right_speed)
         self.i2c_controller.set_stepper_speed(turret_speed)
         self.last_msg_time = time()
 
     def joy_callback(self, joy_msg):
         # X von Joy-Message
-        self.joy_x = joy_msg.axes[2]  # Erster Achsenwert
+        self.joy_x = joy_msg.axes[0]  # Erster Achsenwert
         self.joy_axes = joy_msg.axes  # Ganze Liste
     
     def __init__(self):
