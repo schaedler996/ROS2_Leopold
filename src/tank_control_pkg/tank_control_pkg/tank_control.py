@@ -74,7 +74,8 @@ class TankControl(Node):
         left_speed = self.map_range(corrected_linear_x - angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         right_speed = self.map_range(corrected_linear_x + angular_speed_amplified, -1.0, 1.0, -max_speed, max_speed)
         turret_speed = self.map_range(self.joy_axes[2], -0.99, 0.99, -127, 127)
-        
+        print(f" corrected_linear_x: {corrected_linear_x},  angular_speed_amplified: {angular_speed_amplified},Left: {int(left_speed)}, Right: {int(right_speed)}, Turret: {int(turret_speed)}")
+
         # Begrenze die Geschwindigkeiten, um sicherzustellen, dass sie innerhalb von [-127, 127] bleiben
         left_speed = max(min(left_speed, max_speed), -max_speed)
         right_speed = max(min(right_speed, max_speed), -max_speed)
